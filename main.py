@@ -10,13 +10,11 @@ number_of_dice = int(input("How many dice do you want to roll? "))
 userInput = input("Roll the dice? (y/n): ")
 
 
-
-
 while True:
     diceResults = []
     if userInput == "y":
         for i in range(number_of_dice):
-            roll = random.randrange(1,6)
+            roll = random.randrange(1,7)
             diceResults.append(roll)
             
         
