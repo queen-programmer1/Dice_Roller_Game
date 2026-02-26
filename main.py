@@ -6,14 +6,24 @@
 import random
 
 dice_rolled_counter = 0 
+number_of_dice = int(input("How many dice do you want to roll? "))
 userInput = input("Roll the dice? (y/n): ")
 
 
+
+
 while True:
+    diceResults = []
     if userInput == "y":
-        print((random.randrange(1,6), random.randrange(1,6)))
-        userInput = input("Roll the dice? (y/n): ")
+        for i in range(number_of_dice):
+            roll = random.randrange(1,6)
+            diceResults.append(roll)
+            
+        
         dice_rolled_counter = dice_rolled_counter + 1
+        print(tuple(diceResults))
+        diceResults.clear()
+        userInput = input("Roll the dice? (y/n): ")
         
         
     elif userInput == "n":
